@@ -1,2 +1,4 @@
-helle
+hello
 hi
+how are you?
+where are you from?

@@ -17,7 +17,7 @@ char	*get_next_line(int fd)
 	static t_list	*res;
 	char			*line_next;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, &line_next, 0) < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= INT_MAX || read(fd, &line_next, 0) < 0)
 		return (NULL);
 	ft_read_and_create(&res, fd);
 	if (res == NULL)
